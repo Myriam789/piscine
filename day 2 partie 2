@@ -1,0 +1,16 @@
+import csv
+
+
+def native_csv_read(file: str) -> list[tuple] :
+    result = []
+    with open(file) as csv_file:
+        next(file)
+        for index in enumerate(file):
+            parts = line.strip().split(',')
+            row = (index, *parts)
+            result.append(row)
+            return result
+
+if__name__
+        csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
